@@ -1,0 +1,275 @@
+F
+======================================================================
+FAIL: test_greetings (hw01_basics.test_basics.TestBasics.test_greetings)
+Print the string 'Hello! Welcome to the first homework assignment!'.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 30, in test_greetings
+    self.assert_stdout(greetings, None, None, "Hello! Welcome to the first homework assignment!\n")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/mock.py", line 1426, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 18, in assert_stdout
+    self.assertEqual(mock_stdout.getvalue(), expected_output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' != 'Hello! Welcome to the first homework assignment!\n'
++ Hello! Welcome to the first homework assignment!
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_modulo (hw01_basics.test_basics.TestBasics.test_modulo)
+Return the value x modulo y (i.e., do NOT print it).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 34, in test_modulo
+    self.assertEqual(modulo(5, 3), 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: None != 2
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_odd_number (hw01_basics.test_basics.TestBasics.test_odd_number)
+Return True or False whether x is odd or not.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 40, in test_odd_number
+    self.assertEqual(odd_number(15), True)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != True
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_happy_birthday (hw01_basics.test_basics.TestBasics.test_happy_birthday)
+Print "Happy >age<th birthday, >name<!".
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 48, in test_happy_birthday
+    self.assert_stdout(happy_birthday, "Peter", "17", "Happy 17th birthday, Peter!\n")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/mock.py", line 1426, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 18, in assert_stdout
+    self.assertEqual(mock_stdout.getvalue(), expected_output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' != 'Happy 17th birthday, Peter!\n'
++ Happy 17th birthday, Peter!
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_word_multiplier (hw01_basics.test_basics.TestBasics.test_word_multiplier)
+Return a word multiplied n times.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 52, in test_word_multiplier
+    self.assertEqual(word_multiplier("Cheese", 3), "CheeseCheeseCheese")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'CheeseCheeseCheese'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_reverse (hw01_basics.test_basics.TestBasics.test_reverse)
+Return the reverse of a word.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 56, in test_reverse
+    self.assertEqual(reverse("ABCDE"), 'EDCBA')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'EDCBA'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_every_nth (hw01_basics.test_basics.TestBasics.test_every_nth)
+Return every nth letter of w word
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 63, in test_every_nth
+    self.assertEqual(every_nth("Ich", 2), 'Ih')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'Ih'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_second_element (hw01_basics.test_basics.TestBasics.test_second_element)
+Return the second element of a list.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 68, in test_second_element
+    self.assertEqual(second_element(self.listOne), 'Spain')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'Spain'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_concatenate_lists (hw01_basics.test_basics.TestBasics.test_concatenate_lists)
+Return the concatenation of both lists.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 72, in test_concatenate_lists
+    self.assertEqual(concatenate_lists(self.listOne, self.listTwo),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     ['Germany', 'Spain', 'Italy', 'Poland', 'France', 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != ['Germany', 'Spain', 'Italy', 'Poland', '[48 chars]5, 5]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_swap_half (hw01_basics.test_basics.TestBasics.test_swap_half)
+Swaps the first half of a list with the second half of the list.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 78, in test_swap_half
+    self.assertEqual(swap_half(self.listOne), ['Italy', 'Poland', 'France', 'Germany', 'Spain'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != ['Italy', 'Poland', 'France', 'Germany', 'Spain']
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_replace_elements (hw01_basics.test_basics.TestBasics.test_replace_elements)
+Replace the elements in list_a at the positions given in replacement_indices with new_value, and return the
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 84, in test_replace_elements
+    self.assertEqual(replace_elements([1, 2, 3, 4, 5, 6, 7, 8], [0, 4, 3], 0), [0, 2, 3, 0, 0, 6, 7, 8])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != [0, 2, 3, 0, 0, 6, 7, 8]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_long_strings (hw01_basics.test_basics.TestBasics.test_long_strings)
+Takes a list of strings, and returns a list of booleans. Each boolean indicates whether the length of the
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 91, in test_long_strings
+    self.assertEqual(long_strings(listOne, 5), [True, False, False, True, True])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != [True, False, False, True, True]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_print_squares (hw01_basics.test_basics.TestBasics.test_print_squares)
+Print the square values of each element in the list. You can use a for-loop for this problem.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 97, in test_print_squares
+    self.assert_stdout(print_squares, self.listThree, None, "25\n16\n64\n36\n")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/mock.py", line 1426, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 18, in assert_stdout
+    self.assertEqual(mock_stdout.getvalue(), expected_output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' != '25\n16\n64\n36\n'
++ 25
++ 16
++ 64
++ 36
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_count_to_k (hw01_basics.test_basics.TestBasics.test_count_to_k)
+Print out the numbers counting from 0 to k, excluding k.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 103, in test_count_to_k
+    self.assert_stdout(count_to_k, 3, None, "0\n1\n2\n")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/unittest/mock.py", line 1426, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 18, in assert_stdout
+    self.assertEqual(mock_stdout.getvalue(), expected_output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '' != '0\n1\n2\n'
++ 0
++ 1
++ 2
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_no_numbers (hw01_basics.test_basics.TestBasics.test_no_numbers)
+Return True or False whether w contains no numbers.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 111, in test_no_numbers
+    self.assertEqual(no_numbers("Guten Tag!"), True)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != True
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: test_contains_substring (hw01_basics.test_basics.TestBasics.test_contains_substring)
+Return True or False whether w contains a certain substring.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/katharinahalser/SP2526/tmp_repositories/abgabe/hw01_basics/programmiergruppe40/src/hw01_basics/test_basics.py", line 116, in test_contains_substring
+    self.assertEqual(contains_substring("Salat", "S a l a t"), False)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != False
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

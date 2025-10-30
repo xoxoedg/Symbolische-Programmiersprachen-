@@ -1,0 +1,18 @@
+hw01_basics.test_basics.TestBasics.test_greetings                     FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_modulo                        FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_odd_number                    FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_happy_birthday                FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_word_multiplier               FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_reverse                       FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_every_nth                     FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_second_element                FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_concatenate_lists             FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_swap_half                     FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_replace_elements              FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_long_strings                  FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_print_squares                 FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_count_to_k                    FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_no_numbers                    FAILED    0/1 points
+hw01_basics.test_basics.TestBasics.test_contains_substring            FAILED    0/1 points
+####################################
+TOTAL: 0/16 points
