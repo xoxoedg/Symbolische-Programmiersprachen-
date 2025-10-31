@@ -1,3 +1,4 @@
+from account_type import AccountType
 """Exercise 1: Bank account class [5 points]
 
 1. Complete Account class with docstrings** [1 point]
@@ -29,11 +30,89 @@
 
 
 class Account:
-    """ Here has to be a documentation string that describes
-    which data objects this class is designed for.
-    You have to remove the pass statement and then write some
-    code for the class. """
-    pass
+    """
+    Represents a bank account with basic operations like
+    deposit, withdraw, and applying interest rates.
+
+    Attributes:
+        holder (str): Name of the account holder.
+        balance (float): Current balance in the account.
+        account_type (AccountType): Type of the account.
+    """
+
+    def __str__(self):
+        return (
+            f"----- Account Info -----\n"
+            f"Holder: {self.holder}\n"
+            f"Balance: {self.balance:.2f} €\n"
+            f"Type: {self.account_type.name}\n"
+            f"-------------------------"
+        )
+
+    def __init__(self, acc_id, holder, balance=0, account_type=AccountType.STANDARD):
+        self.isAuthorized = False
+        self.pin = 1111
+        self.id = acc_id
+        self.holder = holder
+        self.account_type = account_type
+        self.balance = balance
+
+
+
+
+    def authorize(self, pin):
+        """
+        Authorize with account pin
+
+       Parameters:
+           pin (int): Pin of the account
+
+       Returns:
+           None
+       """
+        if self.pin == pin:
+            self.isAuthorized = True
+
+    def deposit(self, amount):
+        if not self.isAuthorized:
+            print("You need to enter your pin first")
+
+        if amount < 0:
+            print("Sorry you can deposit a negative amount")
+        else:
+            self.balance += amount
+
+        self.isAuthorized = False
+
+
+    def withdraw(self, amount):
+            new_balance = self.balance - amount
+            if not self.isAuthorized:
+                print("You need to enter your pin first")
+
+            if new_balance < 0:
+                print("You cant deposit. Because youre balance would be negative")
+            else:
+                self.balance -= amount
+            self.isAuthorized = False
+            return amount
+
+    def apply_interest(self):
+        match self.account_type:
+            case AccountType.STANDARD:
+                self.balance += self.balance * 1.2
+            case AccountType.GOLD:
+                self.balance += self.balance * 1.7
+            case AccountType.PLATINUM:
+                self.balance += self.balance * 2.2
+
+
+
+
 
 if __name__ == "__main__":
     print("Welcome to the Python Bank!")
+    alice_account = Account(15, "alice", 300, AccountType.PLATINUM)
+    alice_account.authorize(1111)
+    alice_account.withdraw(30)
+    help(Account)
