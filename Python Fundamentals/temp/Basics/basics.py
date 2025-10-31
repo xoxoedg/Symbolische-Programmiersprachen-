@@ -18,6 +18,7 @@ coding problem, and the best coding uses collective brain power.
 
 Happy coding!
 """
+import re
 
 
 # ===BASICS AND NUMBERS====================================================
@@ -28,7 +29,7 @@ def greetings():
     >>> greetings()
     Hello! Welcome to the first homework assignment!
     """
-    pass
+    print("Hello! Welcome to the first homework assignment!")
 
 
 def modulo(x, y):
@@ -40,7 +41,7 @@ def modulo(x, y):
     >>> modulo(70, 7)
     0
     """
-    pass
+    return x % y
 
 def odd_number(x):
     """ Return True or False whether x is odd or not.
@@ -51,7 +52,7 @@ def odd_number(x):
     >>> odd_number(-3)
     True
     """
-    pass
+    return True if x % 2 else False
 
 # ===STRING OPERATIONS====================================================
 
@@ -60,7 +61,7 @@ def happy_birthday(name, age):
     >>> happy_birthday("Peter","17")
     Happy 17th birthday, Peter!
     """
-    pass
+    print(f"Happy {str(age)}th birthday, {name}!")
 
 def word_multiplier(word, n):
     """ Return a word multiplied n times.
@@ -72,7 +73,7 @@ def word_multiplier(word, n):
     >>> word_multiplier('Fish', 0)
     ''
     """
-    pass
+    word * n
 
 def reverse(word):
     """ Return the reverse of a word.
@@ -85,7 +86,7 @@ def reverse(word):
     >>> reverse("12345")
     '54321'
     """
-    pass
+    return word[::-1]
 
 def every_nth(word, n):
     """ Return every nth letter of w word
@@ -96,7 +97,7 @@ def every_nth(word, n):
     >>> every_nth("Apfelstrudel",3)
     'Aetd'
     """
-    pass
+    return word[::n]
 
 # ===LIST OPERATIONS====================================================
 listOne = ["Germany", "Spain", "Italy", "Poland", "France"]
@@ -111,7 +112,7 @@ def second_element(list_a):
     >>> second_element(listTwo)
     2
     """
-    pass
+    return  list_a[1]
 
 def concatenate_lists(list_a, list_b):
     """ Return the concatenation of both lists.
@@ -120,7 +121,8 @@ def concatenate_lists(list_a, list_b):
     >>> concatenate_lists([42,3],["Super","Duper"])
     [42, 3, 'Super', 'Duper']
     """
-    pass
+    return list_a + list_b
+
 
 def swap_half(list_a):
     """ Swaps the first half of a list with the second half of the list.
@@ -130,7 +132,10 @@ def swap_half(list_a):
     >>> swap_half(listOne)
     ['Italy', 'Poland', 'France', 'Germany', 'Spain']
     """
-    pass
+    mid = len(list_a)//2
+    list_first_half = list_a[:mid]
+    list_second_half = list_a[mid:]
+    return list_second_half + list_first_half
 
 def replace_elements(list_a, replacement_indices, new_value):
     """ Replace the elements in list_a at the positions given in replacement_indices with new_value, and return the
@@ -140,7 +145,11 @@ def replace_elements(list_a, replacement_indices, new_value):
     >>> replace_elements(listOne.copy(),[1,2,3],"North pole")
     ['Germany', 'North pole', 'North pole', 'North pole', 'France']
     """
-    pass
+
+    for i in replacement_indices:
+        list_a[i] = new_value
+
+    return list_a
 
 
 def long_strings(string_list, max_length):
@@ -152,7 +161,7 @@ def long_strings(string_list, max_length):
     >>> long_strings(["a", "bb", "", "ccc"], 1)
     [False, True, False, True]
     """
-    pass
+    return list(map(lambda x: len(x) > max_length , string_list))
 
 # ===LOOP OPERATIONS====================================================
 
@@ -164,7 +173,7 @@ def print_squares(list_a):
     64
     36
     """
-    pass
+    [print(i**2) for i in list_a]
 
 
 def count_to_k(k):
@@ -180,7 +189,12 @@ def count_to_k(k):
     -2
     >>> count_to_k(0)
     """
-    pass
+    if k > 0:
+        for i in range(0, k):
+            print(i)
+    elif k < 0:
+        for i in range(-1, k - 1, -1):
+            print(i)
 
 
 # ===REGULAR EXPRESSIONS====================================================
@@ -197,7 +211,7 @@ def no_numbers(string):
     >>> no_numbers("A B C D E F G H I J K L")
     True
     """
-    pass
+    return re.search("\d", string) is None
 
 
 def contains_substring(substring, string):
@@ -215,6 +229,6 @@ def contains_substring(substring, string):
     >>> contains_substring("Salat","S a l a t")
     False
     """
-    pass
+    return re.search(substring.lower(), string.lower()) is not None
 
 # =======================================================
