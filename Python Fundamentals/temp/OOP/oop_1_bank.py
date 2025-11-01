@@ -115,4 +115,3 @@ if __name__ == "__main__":
     alice_account = Account(15, "alice", 300, AccountType.PLATINUM)
     alice_account.authorize(1111)
     alice_account.withdraw(30)
-    help(Account)

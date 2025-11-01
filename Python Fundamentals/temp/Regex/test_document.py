@@ -2,7 +2,7 @@ import inspect
 import os
 
 from unittest import TestCase
-from src.hw03_regex.document import PDFDocument, TextDocument
+from document import PDFDocument, TextDocument
 
 
 class DocumentTest(TestCase):

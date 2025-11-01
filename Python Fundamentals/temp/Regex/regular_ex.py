@@ -5,7 +5,8 @@ def is_valid_email(email):
     TODO: Check if email (str) is a valid email format.
     Output: Bool, True if valid, otherwise False.
     """
-    pass
+    return re.match(r"^[a-z]+\.[a-z]+@[a-z]+\.[a-z]{2,}$", email) is not None
+
 
 def find_mentions(text):
     """

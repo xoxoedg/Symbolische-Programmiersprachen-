@@ -1,9 +1,10 @@
 import unittest
-from hw03_regex.regular_ex import *
+from regular_ex import *
 
 class TestRegexMethods(unittest.TestCase):
 
     def test_valid_email(self): # [1 points]
+        # [a-z]+\.[a-z]+@[a-z]\.[a-z]{3,}
         self.assertTrue(is_valid_email("john.doe@example.com"))
         self.assertFalse(is_valid_email("john.doe@"))
         self.assertFalse(is_valid_email("@example.com"))
